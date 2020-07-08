@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dFh-JR-k59">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Profile View Controller-->
+        <scene sceneID="5yw-RJ-AcC">
+            <objects>
+                <viewController id="dFh-JR-k59" customClass="MyProfileViewController" customModule="TraineeApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8yS-y8-KPi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1nT-x0-TdT">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Posts" id="W6O-AL-plt">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="ic_list_active" id="nHJ-40-ft1">
+                                            <color key="tintColor" red="0.60730808970000005" green="0.34740281109999999" blue="0.71265172960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="sideMenuButtonPressed:" destination="dFh-JR-k59" id="H54-33-xmR"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="OT4-Pt-e1c">
+                                <rect key="frame" x="87.5" y="106" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Ajc-Bc-wRH"/>
+                                    <constraint firstAttribute="height" constant="200" id="S4N-RN-J9K"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sn0-sh-ArL">
+                                <rect key="frame" x="16" y="352" width="343" height="36"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New username" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Ft7-5f-oss">
+                                        <rect key="frame" x="14" y="0.0" width="329" height="36"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93183290149999998" green="0.93183290149999998" blue="0.93183290149999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="5WY-1X-2B9"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ft7-5f-oss" secondAttribute="bottom" id="LFj-l8-f4U"/>
+                                    <constraint firstItem="Ft7-5f-oss" firstAttribute="leading" secondItem="sn0-sh-ArL" secondAttribute="leading" constant="14" id="Lvn-NO-Orx"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ft7-5f-oss" secondAttribute="trailing" id="RGV-0F-oHN"/>
+                                    <constraint firstAttribute="height" constant="36" id="Z2U-ML-6NV"/>
+                                    <constraint firstItem="Ft7-5f-oss" firstAttribute="top" secondItem="sn0-sh-ArL" secondAttribute="top" id="qhz-Kw-ujZ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFs-Fk-hey">
+                                <rect key="frame" x="16" y="427" width="343" height="36"/>
+                                <color key="backgroundColor" red="0.60730808970000005" green="0.34740281109999999" blue="0.71265172960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="UzE-Vq-4Bp"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="vEa-Gn-Q1U"/>
+                                </constraints>
+                                <state key="normal" title="CHANGE USERNAME">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeNameButtonTapped:" destination="dFh-JR-k59" eventType="touchUpInside" id="dGR-VY-eUQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ft7-5f-oss" firstAttribute="top" secondItem="OT4-Pt-e1c" secondAttribute="bottom" constant="46" id="5Hx-YC-zAN"/>
+                            <constraint firstItem="pFs-Fk-hey" firstAttribute="top" secondItem="Ft7-5f-oss" secondAttribute="bottom" constant="39" id="CLm-7H-xrJ"/>
+                            <constraint firstItem="1nT-x0-TdT" firstAttribute="trailing" secondItem="pQc-7P-Kzz" secondAttribute="trailing" id="L5i-6g-yAS"/>
+                            <constraint firstItem="1nT-x0-TdT" firstAttribute="leading" secondItem="pQc-7P-Kzz" secondAttribute="leading" id="VAD-7C-Vbq"/>
+                            <constraint firstItem="pQc-7P-Kzz" firstAttribute="trailing" secondItem="pFs-Fk-hey" secondAttribute="trailing" constant="16" id="W9h-eB-wCo"/>
+                            <constraint firstItem="1nT-x0-TdT" firstAttribute="top" secondItem="pQc-7P-Kzz" secondAttribute="top" id="kCU-wg-UdF"/>
+                            <constraint firstItem="sn0-sh-ArL" firstAttribute="leading" secondItem="pQc-7P-Kzz" secondAttribute="leading" constant="16" id="lAB-7O-53I"/>
+                            <constraint firstItem="OT4-Pt-e1c" firstAttribute="top" secondItem="1nT-x0-TdT" secondAttribute="bottom" constant="42" id="lcv-Tm-DzX"/>
+                            <constraint firstItem="sn0-sh-ArL" firstAttribute="top" secondItem="OT4-Pt-e1c" secondAttribute="bottom" constant="46" id="olz-oF-hfc"/>
+                            <constraint firstItem="OT4-Pt-e1c" firstAttribute="centerX" secondItem="8yS-y8-KPi" secondAttribute="centerX" id="qRq-iz-t3N"/>
+                            <constraint firstItem="pFs-Fk-hey" firstAttribute="leading" secondItem="pQc-7P-Kzz" secondAttribute="leading" constant="16" id="qdo-ln-6VB"/>
+                            <constraint firstItem="pQc-7P-Kzz" firstAttribute="trailing" secondItem="sn0-sh-ArL" secondAttribute="trailing" constant="16" id="xfc-A9-9ft"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pQc-7P-Kzz"/>
+                    </view>
+                    <connections>
+                        <outlet property="newUserNameTextField" destination="Ft7-5f-oss" id="Uii-Aa-Noy"/>
+                        <outlet property="userAvaterImageView" destination="OT4-Pt-e1c" id="kgq-0r-Sgf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3wH-bz-g6x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-250.40000000000001" y="92.203898050974516"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_list_active" width="24" height="24"/>
+        <image name="ic_placeholder" width="68" height="68"/>
+    </resources>
+</document>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dFh-JR-k59">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="5yw-RJ-AcC">
+            <objects>
+                <viewController id="dFh-JR-k59" customClass="MapViewController" customModule="TraineeApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8yS-y8-KPi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ClE-XG-jH9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="t07-DQ-v7t">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </mapView>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fJ9-b6-feM">
+                                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <items>
+                                            <barButtonItem title="Item" image="ic_map_unactive" id="k03-Sy-vIl">
+                                                <color key="tintColor" red="0.60730808970000005" green="0.34740281109999999" blue="0.71265172960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="y8x-2h-lam"/>
+                                            <barButtonItem title="Item" image="ic_list_active" id="EH6-5X-6HS"/>
+                                        </items>
+                                    </toolbar>
+                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AAF-ke-wmh">
+                                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <items>
+                                            <navigationItem title="Posts" id="QiS-Un-wvl">
+                                                <barButtonItem key="leftBarButtonItem" title="Item" image="ic_list_active" id="4Aa-lN-MLS">
+                                                    <color key="tintColor" red="0.60730808970000005" green="0.34740281109999999" blue="0.71265172960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <connections>
+                                                        <action selector="sideMenuButtonPressed:" destination="dFh-JR-k59" id="lLk-0h-wfK"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                                <barButtonItem key="rightBarButtonItem" title="Item" image="ic_add" id="pU6-zA-ddZ">
+                                                    <color key="tintColor" red="0.60730808970000005" green="0.34740281109999999" blue="0.71265172960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="t07-DQ-v7t" firstAttribute="trailing" secondItem="zJu-Xe-Ehi" secondAttribute="trailing" id="75K-G3-7Pv"/>
+                                    <constraint firstItem="t07-DQ-v7t" firstAttribute="bottom" secondItem="zJu-Xe-Ehi" secondAttribute="bottom" id="MzB-mn-geu"/>
+                                    <constraint firstItem="t07-DQ-v7t" firstAttribute="leading" secondItem="zJu-Xe-Ehi" secondAttribute="leading" id="P2k-fF-U1G"/>
+                                    <constraint firstItem="t07-DQ-v7t" firstAttribute="top" secondItem="ClE-XG-jH9" secondAttribute="top" id="QWk-wn-gEQ"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="zJu-Xe-Ehi"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ClE-XG-jH9" firstAttribute="leading" secondItem="pQc-7P-Kzz" secondAttribute="leading" id="GF0-MG-tHn"/>
+                            <constraint firstItem="ClE-XG-jH9" firstAttribute="top" secondItem="8yS-y8-KPi" secondAttribute="top" id="Lyo-p7-ZtX"/>
+                            <constraint firstItem="ClE-XG-jH9" firstAttribute="trailing" secondItem="pQc-7P-Kzz" secondAttribute="trailing" id="h7t-eQ-spQ"/>
+                            <constraint firstItem="ClE-XG-jH9" firstAttribute="bottom" secondItem="pQc-7P-Kzz" secondAttribute="bottom" id="pvH-BF-1lP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pQc-7P-Kzz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3wH-bz-g6x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-250" y="93"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_add" width="24" height="24"/>
+        <image name="ic_list_active" width="24" height="24"/>
+        <image name="ic_map_unactive" width="24" height="24"/>
+    </resources>
+</document>
